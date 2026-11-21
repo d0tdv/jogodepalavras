@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termo Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="topbar">
+            <div class="brand-wrap">
+                <span class="brand-mark">T</span>
+                <div>
+                    <p class="eyebrow">JOGO DE PALAVRAS</p>
+                    <h1>Termo Clone</h1>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-container">
+            <div id="board" class="board" aria-label="Tabuleiro do jogo"></div>
+            <div id="message" class="message" aria-live="polite"></div>
+            <div id="used-letters" class="used-letters" aria-live="polite"></div>
+        </div>
+
+        <button id="help-btn" class="help-btn" type="button" aria-label="Abrir ajuda">?</button>
+        <div id="help-modal" class="modal" aria-modal="true" role="dialog" aria-labelledby="help-title">
+            <div class="modal-content">
+                <span class="close" aria-label="Fechar ajuda">&times;</span>
+                <h2 id="help-title">Como Jogar</h2>
+                <p>Descubra a palavra certa em 6 tentativas. Depois de cada tentativa, as peças mostram o quão perto
+                    você está da solução.</p>
+
+                <div class="example">
+                    <span class="letter right">T</span>
+                    <span class="letter">U</span>
+                    <span class="letter">R</span>
+                    <span class="letter">M</span>
+                    <span class="letter">A</span>
+                </div>
+                <p>A letra <span class="letter right">T</span> faz parte da palavra e está na posição correta.</p>
+
+                <div class="example">
+                    <span class="letter">V</span>
+                    <span class="letter">I</span>
+                    <span class="letter place">O</span>
+                    <span class="letter">L</span>
+                    <span class="letter">A</span>
+                </div>
+                <p>A letra <span class="letter place">O</span> faz parte da palavra mas em outra posição.</p>
+
+                <div class="example">
+                    <span class="letter">P</span>
+                    <span class="letter">U</span>
+                    <span class="letter">L</span>
+                    <span class="letter wrong">G</span>
+                    <span class="letter">A</span>
+                </div>
+                <p>A letra <span class="letter wrong">G</span> não faz parte da palavra.</p>
+
+                <p>Os acentos são preenchidos automaticamente, e não são considerados nas dicas.</p>
+                <p>As palavras podem possuir letras repetidas.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
